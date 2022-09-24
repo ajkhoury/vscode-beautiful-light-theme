@@ -1,0 +1,24 @@
+{
+  "name": "beautiful-light",
+  "displayName": "Beautiful Light",
+  "description": "Beautiful light theme",
+  "publisher": "ajkhoury",
+  "repository": "https://github.com/ajkhoury/vscode-beautiful-light-theme",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.41.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "icon": "./icons/beautiful-light-icon.png",
+  "contributes": {
+    "themes": [
+      {
+        "label": "Beautiful Light",
+        "uiTheme": "vs",
+        "path": "./themes/Beautiful Light-color-theme.json"
+      }
+    ]
+  }
+}

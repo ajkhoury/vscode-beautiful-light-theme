@@ -19,7 +19,7 @@
   "categories": [
     "Themes"
   ],
-  "icon": "./icons/beautiful-light-icon.png",
+  "icon": "icons/beautiful-light-icon.png",
   "contributes": {
     "themes": [
       {

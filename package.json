@@ -3,7 +3,15 @@
   "displayName": "Beautiful Light",
   "description": "Beautiful light theme",
   "publisher": "ajkhoury",
-  "repository": "https://github.com/ajkhoury/vscode-beautiful-light-theme",
+  "author": {
+    "name": "Aidan Khoury",
+    "email": "aidan@revers.engineering",
+    "url": "https://revers.engineering"
+  },
+  "repository": {
+    "url": "https://github.com/ajkhoury/vscode-beautiful-light-theme",
+    "type": "git"
+  },
   "version": "1.0.0",
   "engines": {
     "vscode": "^1.41.0"

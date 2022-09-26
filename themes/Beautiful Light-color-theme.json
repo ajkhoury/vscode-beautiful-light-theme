@@ -60,7 +60,7 @@
 				"constant.numeric"
 			],
 			"settings": {
-				"foreground": "#6f5a20"
+				"foreground": "#926600"
 			}
 		},
 		{
@@ -460,7 +460,7 @@
 		{
 			"scope": "variable.other.enummember",
 			"settings": {
-				"foreground": "#2F4F4F"
+				"foreground": "#B08B35"
 			}
 		},
 		{

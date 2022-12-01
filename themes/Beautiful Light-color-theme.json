@@ -1,4 +1,5 @@
 {
+	"$schema": "vscode://schemas/color-theme",
 	"name": "Beautiful Light",
 	"colors": {
 		"editor.background": "#FAFAFC",
@@ -21,11 +22,29 @@
 		"settings.textInputBorder": "#CECECE",
 		"settings.numberInputBorder": "#CECECE",
 		"statusBarItem.remoteForeground": "#FFF",
-		"statusBarItem.remoteBackground": "#16825D"
+		"statusBarItem.remoteBackground": "#16825D",
+		"statusBarItem.errorBackground": "#c72e0f",
+		"ports.iconRunningProcessForeground": "#369432",
+		"sideBarSectionHeader.background": "#0000",
+		"sideBarSectionHeader.border": "#61616130",
+		"tab.lastPinnedBorder": "#61616130",
+		"notebook.cellBorderColor": "#E8E8E8",
+		"notebook.selectedCellBackground": "#c8ddf150",
+		"list.activeSelectionIconForeground": "#FFF",
+		"list.focusAndSelectionOutline": "#90C2F9",
+		"editorLineNumber.foreground": "#2b91af",
+		"editorLineNumber.activeForeground": "#2b91af",
+		"terminal.inactiveSelectionBackground": "#E5EBF1",
+		"editorInlayHint.background": "#E6E6E6",
+		"editorInlayHint.foreground": "#686868"
 	},
 	"tokenColors": [
 		{
-			"scope": ["meta.embedded", "source.groovy.embedded"],
+			"scope": [
+				"meta.embedded",
+				"source.groovy.embedded",
+				"string meta.image.inline.markdown"
+			],
 			"settings": {
 				"foreground": "#000000ff"
 			}
@@ -62,7 +81,10 @@
 		},
 		{
 			"scope": [
-				"constant.numeric"
+				"constant.numeric",
+				"variable.other.enummember",
+				"keyword.operator.plus.exponent",
+				"keyword.operator.minus.exponent"
 			],
 			"settings": {
 				"foreground": "#926600"
@@ -345,8 +367,12 @@
 				"keyword.operator.expression",
 				"keyword.operator.cast",
 				"keyword.operator.sizeof",
+				"keyword.operator.alignof",
+				"keyword.operator.typeid",
+				"keyword.operator.alignas",
 				"keyword.operator.instanceof",
-				"keyword.operator.logical.python"
+				"keyword.operator.logical.python",
+				"keyword.operator.wordlike"
 			],
 			"settings": {
 				"foreground": "#0000ff"
@@ -410,13 +436,14 @@
 			}
 		},
 		{
-			"scope": "variable",
-			"settings": {
-				"foreground": "#000000"
-			}
-		},
-		{
-			"scope": "entity.name.function",
+			"name": "Function declarations",
+			"scope": [
+				"entity.name.function",
+				"support.function",
+				"support.constant.handlebars",
+				"source.powershell variable.other.member",
+				"entity.name.operator.custom-literal" // See https://en.cppreference.com/w/cpp/language/user_literal
+			],
 			"settings": {
 				"foreground": "#EB2177"
 			}
@@ -439,9 +466,54 @@
 			}
 		},
 		{
+			"name": "Types declaration and references",
 			"scope": [
+				"support.class",
+				"support.type",
 				"entity.name.type",
-				"entity.name.class"
+				"entity.name.namespace",
+				"entity.other.attribute",
+				"entity.name.scope-resolution",
+				"entity.name.class",
+				"storage.type.numeric.go",
+				"storage.type.byte.go",
+				"storage.type.boolean.go",
+				"storage.type.string.go",
+				"storage.type.uintptr.go",
+				"storage.type.error.go",
+				"storage.type.rune.go",
+				"storage.type.cs",
+				"storage.type.generic.cs",
+				"storage.type.modifier.cs",
+				"storage.type.variable.cs",
+				"storage.type.annotation.java",
+				"storage.type.generic.java",
+				"storage.type.java",
+				"storage.type.object.array.java",
+				"storage.type.primitive.array.java",
+				"storage.type.primitive.java",
+				"storage.type.token.java",
+				"storage.type.groovy",
+				"storage.type.annotation.groovy",
+				"storage.type.parameters.groovy",
+				"storage.type.generic.groovy",
+				"storage.type.object.array.groovy",
+				"storage.type.primitive.array.groovy",
+				"storage.type.primitive.groovy"
+			],
+			"settings": {
+				"foreground": "#2B91AF"
+			}
+		},
+		{
+			"name": "Types declaration and references, TS grammar specific",
+			"scope": [
+				"meta.type.cast.expr",
+				"meta.type.new.expr",
+				"support.constant.math",
+				"support.constant.dom",
+				"support.constant.json",
+				"entity.other.inherited-class"
 			],
 			"settings": {
 				"foreground": "#2B91AF"
@@ -454,16 +526,38 @@
 			}
 		},
 		{
+			"name": "Control flow / Special keywords",
 			"scope": [
 				"keyword.operator.new",
-				"keyword.operator.delete"
+				"keyword.operator.delete",
+				"source.cpp keyword.operator.new",
+				"source.cpp keyword.operator.delete",
+				"keyword.other.using",
+				"keyword.other.operator"
 			],
 			"settings": {
 				"foreground": "#0000FF"
 			}
 		},
 		{
-			"scope": "variable.other.enummember",
+			"name": "Variable and parameter name",
+			"scope": [
+				"variable",
+				"meta.definition.variable.name",
+				"support.variable",
+				"entity.name.variable",
+				"constant.other.placeholder", // placeholders in strings
+			],
+			"settings": {
+				"foreground": "#000000"
+			}
+		},
+		{
+			"name": "Constants and enums",
+			"scope": [
+				"variable.other.constant",
+				"variable.other.enummember"
+			],
 			"settings": {
 				"foreground": "#B08B35"
 			}
@@ -474,5 +568,12 @@
 				"foreground": "#808080"
 			}
 		}
-	]
+	],
+	"semanticHighlighting": true,
+	"semanticTokenColors": {
+		"newOperator": "#0000FF",
+		"stringLiteral": "#c24401",
+		"customLiteral": "#EB2177",
+		"numberLiteral": "#926600",
+	}
 }

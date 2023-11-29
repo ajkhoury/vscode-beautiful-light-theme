@@ -7,6 +7,8 @@
 		"editor.inactiveSelectionBackground": "#E5EBF1",
 		"editorIndentGuide.background": "#D3D3D3",
 		"editorIndentGuide.activeBackground": "#939393",
+		"editorIndentGuide.background1": "#D3D3D3",
+		"editorIndentGuide.activeBackground1": "#939393",
 		"editor.selectionHighlightBackground": "#ADD6FF80",
 		"editorSuggestWidget.background": "#F3F3F3",
 		"editorWhitespace.foreground": "#2b90af38",
@@ -756,13 +758,22 @@
 			}
 		},
 		{
-			"name": "Constants and enums",
+			"name": "Enum constants",
 			"scope": [
-				"variable.other.constant",
-				"variable.other.enummember"
+				"variable.other.enummember",
+				"variable.other.constant"
 			],
 			"settings": {
 				"foreground": "#B08B35"
+			}
+		},
+		{
+			"name": "Constant variables in C",
+			"scope": [
+				"variable.other.constant.c"
+			],
+			"settings": {
+				"foreground": "#2a0046"
 			}
 		},
 		{

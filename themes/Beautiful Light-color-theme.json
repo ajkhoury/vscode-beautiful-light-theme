@@ -770,10 +770,11 @@
 		{
 			"name": "Constant variables in C",
 			"scope": [
-				"variable.other.constant.c"
+				"variable.other.constant.c",
+				"variable.other.constant.property.c"
 			],
 			"settings": {
-				"foreground": "#2a0046"
+				"foreground": "#260046"
 			}
 		},
 		{
